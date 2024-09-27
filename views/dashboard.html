@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">HealthSync</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="gestion.html">Gestion de Données</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teleconsultation.html">Téléconsultation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donnee-vital.html">Données Vitales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parametre.html">Paramètres</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Bienvenue sur votre tableau de bord</h1>
+            <p class="lead">Gérez votre santé où que vous soyez avec HealthSync.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Gestion de Données -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-folder-fill display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Gestion de Données</h5>
+                        <p class="card-text">Organisez et analysez vos données médicales de manière efficace.</p>
+                        <a href="gestion.html" class="btn btn-primary">Accéder</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Téléconsultation -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people-fill display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Téléconsultation</h5>
+                        <p class="card-text">Connectez-vous avec des professionnels de santé à distance.</p>
+                        <a href="teleconsultation.html" class="btn btn-success">Accéder</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Donnée Vital -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-heart-pulse-fill display-4 text-danger mb-3"></i>
+                        <h5 class="card-title">Données Vitales</h5>
+                        <p class="card-text">Suivez et gérez vos données vitales pour une santé optimale.</p>
+                        <a href="donnee-vital.html" class="btn btn-danger">Accéder</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Paramètres -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-gear-fill display-4 text-secondary mb-3"></i>
+                        <h5 class="card-title">Paramètres</h5>
+                        <p class="card-text">Personnalisez les paramètres de votre compte HealthSync.</p>
+                        <a href="parametre.html" class="btn btn-secondary">Accéder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 HealthSync. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</body>
+</html>

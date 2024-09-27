@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync - Paramètres</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/parametre.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">HealthSync</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestion.html">Gestion de Données</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teleconsultation.html">Téléconsultation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donnee-vital.html">Données Vitales</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="parametre.html">Paramètres</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Paramètres de HealthSync</h1>
+            <p class="lead">Configurez et personnalisez votre expérience HealthSync.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- User Account Settings -->
+        <section id="userAccountSettings" class="mb-5">
+            <h2 class="text-center mb-4">Paramètres du Compte Utilisateur</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Informations du Profil</h4>
+                    <form id="profileForm">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Votre nom">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Adresse e-mail</label>
+                            <input type="email" class="form-control" id="userEmail" placeholder="Votre adresse e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userPhone" class="form-label">Numéro de téléphone</label>
+                            <input type="tel" class="form-control" id="userPhone" placeholder="Votre numéro de téléphone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userPassword" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="userPassword" placeholder="Nouveau mot de passe">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Photo de Profil</h4>
+                    <div class="mb-3">
+                        <label for="profilePicture" class="form-label">Télécharger une nouvelle photo</label>
+                        <input class="form-control" type="file" id="profilePicture">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notification Settings -->
+        <section id="notificationSettings" class="mb-5">
+            <h2 class="text-center mb-4">Configuration des Notifications</h2>
+            <form id="notificationForm">
+                <div class="mb-3">
+                    <h5>Préférences de Notifications</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                        <label class="form-check-label" for="emailNotifications">
+                            Notifications par e-mail
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="smsNotifications">
+                        <label class="form-check-label" for="smsNotifications">
+                            Notifications par SMS
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="pushNotifications">
+                        <label class="form-check-label" for="pushNotifications">
+                            Notifications push
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h5>Fréquence des Notifications</h5>
+                    <select class="form-select" id="notificationFrequency">
+                        <option value="immediate" selected>Immédiat</option>
+                        <option value="daily">Résumé quotidien</option>
+                        <option value="weekly">Résumé hebdomadaire</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+            </form>
+        </section>
+
+        <!-- Device Management -->
+        <section id="deviceManagement" class="mb-5">
+            <h2 class="text-center mb-4">Gestion des Dispositifs</h2>
+            <div class="mb-3">
+                <h5>Liste des Dispositifs Connectés</h5>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Moniteur de Fréquence Cardiaque
+                        <span class="badge bg-success">Connecté</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Oxymètre
+                        <span class="badge bg-warning">En attente</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Thermomètre
+                        <span class="badge bg-danger">Déconnecté</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb-3">
+                <h5>Ajout de Nouveaux Dispositifs</h5>
+                <button class="btn btn-success">Ajouter un Dispositif</button>
+            </div>
+            <div class="mb-3">
+                <h5>Mise à Jour des Dispositifs</h5>
+                <button class="btn btn-info">Vérifier les Mises à Jour</button>
+            </div>
+        </section>
+
+        <!-- Emergency Protocol Customization -->
+        <section id="protocolCustomization" class="mb-5">
+            <h2 class="text-center mb-4">Personnalisation des Protocoles</h2>
+            <div class="mb-3">
+                <h5>Configuration des Protocoles d'Urgence</h5>
+                <button class="btn btn-warning">Configurer les Protocoles</button>
+            </div>
+            <div class="mb-3">
+                <h5>Bibliothèque de Protocoles</h5>
+                <button class="btn btn-primary">Accéder à la Bibliothèque</button>
+            </div>
+        </section>
+
+        <!-- Security and Privacy Settings -->
+        <section id="securitySettings" class="mb-5">
+            <h2 class="text-center mb-4">Paramètres de Sécurité et de Confidentialité</h2>
+            <form id="securityForm">
+                <div class="mb-3">
+                    <h5>Options de Sécurité</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mfa" checked>
+                        <label class="form-check-label" for="mfa">
+                            Authentification Multi-Facteurs (MFA)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="biometric">
+                        <label class="form-check-label" for="biometric">
+                            Authentification Biométrique
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h5>Paramètres de Confidentialité</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dataSharing" checked>
+                        <label class="form-check-label" for="dataSharing">
+                            Partage des Données avec les Services Médicaux
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+            </form>
+        </section>
+
+        <!-- Backup and Restore -->
+        <section id="backupRestore" class="mb-5">
+            <h2 class="text-center mb-4">Sauvegarde et Restauration</h2>
+            <div class="text-center">
+                <button class="btn btn-secondary mx-2">Sauvegarder les Paramètres</button>
+                <button class="btn btn-danger mx-2">Restaurer les Paramètres</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 HealthSync. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/parametre.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync - Téléconsultation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/teleconsultation.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">HealthSync</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestion.html">Gestion de Données</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="teleconsultation.html">Téléconsultation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donnee-vital.html">Données Vitales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parametre.html">Paramètres</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Téléconsultation</h1>
+            <p class="lead">Choisissez un médecin selon votre pathologie pour commencer une consultation vidéo.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Doctor Profile Cards -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="assets/images/doctor1.jpg" class="card-img-top" alt="Dr. John Doe">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. John Doe</h5>
+                        <p class="card-text">Cardiologist</p>
+                        <button class="btn btn-primary start-call-btn" data-doctor="Dr. John Doe">Démarrer une Visio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="assets/images/doctor2.jpg" class="card-img-top" alt="Dr. Jane Smith">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Jane Smith</h5>
+                        <p class="card-text">Neurologist</p>
+                        <button class="btn btn-primary start-call-btn" data-doctor="Dr. Jane Smith">Démarrer une Visio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="assets/images/doctor3.jpg" class="card-img-top" alt="Dr. Emily Brown">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Emily Brown</h5>
+                        <p class="card-text">Dermatologist</p>
+                        <button class="btn btn-primary start-call-btn" data-doctor="Dr. Emily Brown">Démarrer une Visio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Call Section -->
+        <div id="videoCallSection" class="d-none">
+            <div class="row my-5">
+                <div class="col-md-12 text-center">
+                    <h3>Consultation Vidéo avec <span id="doctorName"></span></h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <video id="localVideo" autoplay muted class="w-100"></video>
+                </div>
+                <div class="col-md-6">
+                    <video id="remoteVideo" autoplay class="w-100"></video>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-4 text-center">
+                    <button class="btn btn-danger" id="endCallBtn">Terminer l'appel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 HealthSync. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/teleconsultation.js"></script>
+</body>
+</html>

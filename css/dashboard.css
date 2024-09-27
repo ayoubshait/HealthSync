@@ -1,0 +1,43 @@
+/* Custom styles for the dashboard */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+header {
+    background-image: url('assets/images/healthsync-toolkit.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+}
+
+.btn-primary, .btn-success, .btn-danger, .btn-secondary {
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+footer {
+    margin-top: auto;
+}

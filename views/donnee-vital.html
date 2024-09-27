@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync - Données Vitales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/donnee-vital.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">HealthSync</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestion.html">Gestion de Données</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teleconsultation.html">Téléconsultation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donnee-vital.html">Données Vitales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parametre.html">Paramètres</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Données Vitales</h1>
+            <p class="lead">Surveillez les paramètres vitaux en temps réel pour une gestion optimale des urgences.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Real-Time Vital Data -->
+        <section id="vitalDataSection">
+            <h2 class="text-center mb-4">Exemples de Paramètres Vitaux</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Paramètre</th>
+                            <th>Valeur</th>
+                            <th>Unité</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vitalDataTable">
+                        <tr>
+                            <td>Fréquence Cardiaque</td>
+                            <td id="heartRateValue">75</td>
+                            <td>BPM</td>
+                            <td><span class="badge bg-success">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tension Artérielle</td>
+                            <td id="bloodPressureValue">120/80</td>
+                            <td>mmHg</td>
+                            <td><span class="badge bg-success">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td>Saturation en Oxygène</td>
+                            <td id="oxygenSaturationValue">98</td>
+                            <td>%</td>
+                            <td><span class="badge bg-success">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td>Température Corporelle</td>
+                            <td id="bodyTemperatureValue">37.0</td>
+                            <td>°C</td>
+                            <td><span class="badge bg-success">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td>Fréquence Respiratoire</td>
+                            <td id="respiratoryRateValue">16</td>
+                            <td>resp/min</td>
+                            <td><span class="badge bg-success">Normal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Alert Section -->
+        <section id="alertSection" class="my-5">
+            <h3 class="text-center text-danger">Alertes Urgentes</h3>
+            <div id="alertList" class="alert alert-danger d-none">
+                <!-- Dynamic Alert Content -->
+            </div>
+        </section>
+
+        <!-- Manual Control Panel -->
+        <section id="manualControlSection" class="my-5">
+            <h3 class="text-center">Panneau de Contrôle Manuel</h3>
+            <div class="text-center">
+                <button class="btn btn-warning mx-2" id="calibrateSensorsBtn">Calibration des Capteurs</button>
+                <button class="btn btn-secondary mx-2" id="syncDataBtn">Synchronisation des Données</button>
+                <button class="btn btn-info mx-2" id="initializeBtn">Initialiser</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 HealthSync. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js for Data Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/donnee-vital.js"></script>
+</body>
+
+</html>

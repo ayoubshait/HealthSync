@@ -1,0 +1,8 @@
+//installing node.js
+node -v
+npm -v
+//Node.js Packages
+npm init -y
+npm install express path
+//run the server
+node server.js
